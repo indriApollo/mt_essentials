@@ -51,3 +51,7 @@ end
 minetest.register_on_respawnplayer(function(player)
 	return spawn.tp_to_spawn(player:get_player_name()) -- if func fails, fallback to standard spawn
 end)
+
+minetest.register_on_joinplayer(function(player)
+	return spawn.tp_to_spawn(player:get_player_name()) -- if func fails, fallback to standard spawn
+end)
